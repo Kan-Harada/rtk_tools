@@ -188,6 +188,6 @@ class rtkEzui(object):
     yf.close()
 
   def update(self):
-    if self.prop["lift"]: self.pane.lift()
+#    if self.prop["lift"]: self.pane.lift()
     rtkPage.update()
 
