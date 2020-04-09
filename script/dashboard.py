@@ -214,8 +214,8 @@ def cb_display(n):
   timeout.set(functools.partial(cb_display,n),0.5)
 
 ####Message box
-mbox=dashLog("+0+300",150,"#0000CC","#FFFFFF")
-ebox=dashLog("+0+50",90,"#CC0000","#FFFFFF")
+mbox=dashLog("+980+20",103,70,"#0000CC","#FFFFA0")
+ebox=dashLog("+980+900",103,10,"#CC0000","#FFA0A0")
 def cb_mbox_push(n,msg):
   if n==0:
     timeout.set(functools.partial(mbox.push,msg),0)
@@ -329,6 +329,7 @@ for key in ckeys:
     Displays.append(item)
 
 if len(Displays)>0: timeout.set(functools.partial(cb_display,0),1)
+cb_mbox_pop()
 
 while not rospy.is_shutdown():
   timeout.update()

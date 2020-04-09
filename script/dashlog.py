@@ -3,12 +3,13 @@ import ttk
 import time
 
 class dashLog:
-  def __init__(self,pos,wid,fg,bg):
+  def __init__(self,pos,wid,higt,fg,bg):
     self.buffer=[]
     self.box=None
     self.text=None
     self.pos=pos
     self.wid=wid
+    self.higt=higt
     self.fg=fg
     self.bg=bg
     self.hys=50
@@ -20,7 +21,7 @@ class dashLog:
     self.box=tk.Tk()
     self.box.geometry(self.pos)
     self.box.protocol("WM_DELETE_WINDOW",self.close)
-    self.text=tk.Text(self.box,width=self.wid,height=20,foreground=self.fg,background=self.bg)
+    self.text=tk.Text(self.box,width=self.wid,height=self.higt,foreground=self.fg,background=self.bg)
     self.text.pack(side='left',fill='y',anchor='nw')
     msg=""
     for ln in self.buffer:
