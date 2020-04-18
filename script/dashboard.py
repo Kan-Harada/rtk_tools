@@ -214,7 +214,7 @@ def cb_display(n):
   timeout.set(functools.partial(cb_display,n),0.5)
 
 ####Message box
-mbox=dashLog("+980+20",103,70,"#0000CC","#FFFFA0")
+mbox=dashLog("+0+920",267,8,"#0000CC","#FFFFA0")
 ebox=dashLog("+980+900",103,10,"#CC0000","#FFA0A0")
 def cb_mbox_push(n,msg):
   if n==0:
@@ -223,7 +223,7 @@ def cb_mbox_push(n,msg):
     timeout.set(functools.partial(ebox.push,msg),0)
 def cb_mbox_pop():
   mbox.popup()
-  ebox.popup()
+#  ebox.popup()
 
 ########################################################
 rospy.init_node("dashboard",anonymous=True)

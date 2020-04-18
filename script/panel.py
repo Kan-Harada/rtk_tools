@@ -16,7 +16,7 @@ from rtk_tools.ezui import rtkEzui
 from rtk_tools import dictlib
 
 Config={
-  "geom":"300x750-0+0",
+  "geom":"300x1050-0+0",
   "dump":"",
   "conf":"panel.ui",
   "lift":True,
